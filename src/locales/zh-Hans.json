@@ -698,6 +698,7 @@
     "bittorrent": {
       "autoAddTrackers": "自动将这些 Tracker 添加到新下载",
       "autoAddTrackersHint": "每行一个 Tracker",
+      "autoUpdateTrackers": "自动从URL更新 Tracker 列表",
       "maxActiveCheckingTorrents": "最大活跃校验种子数",
       "privacy": {
         "enableAnonymous": "启用匿名模式",

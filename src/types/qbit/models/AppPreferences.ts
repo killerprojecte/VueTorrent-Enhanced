@@ -22,6 +22,12 @@ export interface NetworkInterface {
 }
 
 export default interface AppPreferences {
+  /** Trackers from update url */
+  public_trackers: string
+  /** Enable Auto Update Trackers */
+  auto_update_trackers_enabled: boolean
+  /** Tracker Update Url */
+  customize_trackers_list_url: string
   /** Whether torrents should be placed at the top of the queue when added */
   add_to_top_of_queue: boolean
   /** List of trackers to add to new torrent */

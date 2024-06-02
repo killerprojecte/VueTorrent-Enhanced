@@ -52,6 +52,9 @@ export default class MockProvider implements IProvider {
   async getPreferences(): Promise<AppPreferences> {
     return this.generateResponse({
       result: {
+        public_trackers: "",
+        auto_update_trackers_enabled: false,
+        customize_trackers_list_url: "",
         add_to_top_of_queue: false,
         add_trackers: '',
         add_trackers_enabled: false,

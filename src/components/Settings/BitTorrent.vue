@@ -1,4 +1,4 @@
-<script setup lang="ts">
+/<script setup lang="ts">
 import { Encryption, MaxRatioAction } from '@/constants/qbit/AppPreferences'
 import { usePreferenceStore } from '@/stores'
 import { ref } from 'vue'
@@ -208,6 +208,28 @@ const thenTypes = ref([
       <v-textarea
         v-model="preferenceStore.preferences!.add_trackers"
         :disabled="!preferenceStore.preferences!.add_trackers_enabled"
+        auto-grow
+        clearable
+        persistent-hint
+        :hint="t('settings.bittorrent.autoAddTrackersHint')" />
+    </v-list-item>
+
+    <v-divider class="mt-3" />
+
+    <v-list-item>
+      <v-checkbox v-model="preferenceStore.preferences!.auto_update_trackers_enabled" hide-details :label="t('settings.bittorrent.autoUpdateTrackers')" />
+    </v-list-item>
+    <v-list-item>
+      <v-text-field
+            v-model="preferenceStore.preferences!.customize_trackers_list_url"
+            :disabled="!preferenceStore.preferences!.auto_update_trackers_enabled"
+            hide-details
+      />
+    </v-list-item>
+    <v-list-item>
+      <v-textarea
+        v-model="preferenceStore.preferences!.public_trackers"
+        :disabled="!preferenceStore.preferences!.auto_update_trackers_enabled"
         auto-grow
         clearable
         persistent-hint
